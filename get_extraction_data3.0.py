@@ -246,3 +246,14 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+    sentences = []
+    with open('药品总的实体对.txt', 'r', encoding='utf-8') as f:
+        while True:
+            con = f.readline()
+            if con == '':
+                break
+            sentences.append(con[:-1])
+    sens = list(set(sentences))
+    print(len(sens))
+
